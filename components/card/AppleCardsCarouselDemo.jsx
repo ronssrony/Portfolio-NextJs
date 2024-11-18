@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-
+import FloatingActionButtons from "../buttons/floatingbutton";
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
     <Card key={card.src} card={card} index={index} />
@@ -12,78 +12,196 @@ export function AppleCardsCarouselDemo() {
     (<div className="w-full h-full py-20 flex flex-col">
       <h2
         className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        Get to know your iSad.
+        Project Docs
       </h2>
       <Carousel items={cards} />
     </div>)
   );
 }
 
-const DummyContent = () => {
+const ImazineContent = () => {
   return (<>
-    {[...new Array(3).fill(1)].map((_, index) => {
-      return (
-        (<div
-          key={"dummy-content" + index}
+
+        <div
+          key={"dummy-content"}
           className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
           <p
             className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
             <span className="font-bold text-neutral-700 dark:text-neutral-200">
-              The first rule of Apple club is that you boast about Apple club.
+            Built a fully server-side rendered (SSR) e-commerce platform 
             </span>{" "}
-            Keep a journal, quickly jot down a grocery list, and take amazing
-            class notes. Want to convert those notes to text? No problem.
-            Langotiya jeetu ka mara hua yaar is ready to capture every
-            thought.
+  using the <strong className="font-bold text-neutral-700 dark:text-neutral-200" >EJS</strong> templating engine. The platform is fully responsive, styled with <strong className="font-bold text-neutral-700 dark:text-neutral-200">Tailwind CSS</strong> , featuring secure <strong className="font-bold text-neutral-700 dark:text-neutral-200">JWT</strong> authentication, Google,
+Facebook, and Twitter login <strong className="font-bold text-neutral-700 dark:text-neutral-200" >(Passport.js)</strong>. Integrated <strong className="font-bold text-neutral-700 dark:text-neutral-200">Stripe</strong> for payments, an admin panel
+for product management, file uploads <strong className="font-bold text-neutral-700 dark:text-neutral-200">(Multer)</strong>, and a basic <strong className="font-bold text-neutral-700 dark:text-neutral-200"  >recommendation feature</strong>.
+Included advanced search with product filters.
           </p>
           <Image
-            src="https://assets.aceternity.com/macbook.png"
+            src="/projects/imazine.png"
             alt="Macbook mockup from Aceternity UI"
             height="500"
             width="500"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain" />
-        </div>)
-      );
-    })}
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain mt-5" />
+            <p className="text-center mt-2 font-sans dark:text-neutral-200">/</p>
+        </div>
+       
+        <div
+          key={"dummy-content2"}
+          className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+          <p
+            className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+            <span className="font-bold text-neutral-700 dark:text-neutral-200">
+
+            </span>{" "}
+            After clicking on a category like Men, Women, or Kids, the app dynamically queries the appropriate products from <strong className="font-bold text-neutral-700 dark:text-neutral-200" >MongoDB Atlas</strong> and renders them using the <strong className="font-bold text-neutral-700 dark:text-neutral-200" >EJS templating engine</strong>.
+          </p>
+          <Image
+            src="/projects/mazncategory.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain mt-5" />
+            <p className="text-center mt-2 font-sans dark:text-neutral-200">/collection/woman</p>
+        </div>
+
+        <div
+          key={"dummy-content7"}
+          className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+          <p
+            className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+            <span className="font-bold text-neutral-700 dark:text-neutral-200">
+
+            </span>{" "}
+            After clicking on a collection, we can further refine it by filtering through categories like T-shirts, Shirts, Jeans, Jackets, etc., ensuring a seamless browsing experience.
+          </p>
+          <Image
+            src="/projects/mazncollection.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain mt-5" />
+            <p className="text-center mt-2 font-sans dark:text-neutral-200">/collection/woman</p>
+        </div>
+
+        <div
+          key={"dummy-content3"}
+          className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+          <p
+            className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+            <span className="font-bold text-neutral-700 dark:text-neutral-200">
+
+            </span>{" "}
+            By clicking View All, you can further filter the collection by Price, Size, and Color, allowing for a more tailored shopping experience.
+          </p>
+          <Image
+            src="/projects/maznview.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain mt-5" />
+            <p className="text-center mt-2 font-sans dark:text-neutral-200">/collection/woman</p>
+        </div>
+       
+        <div
+          key={"dummy-content4"}
+          className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+          <p
+            className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+            <span className="font-bold text-neutral-700 dark:text-neutral-200">
+
+            </span>{" "}
+            By clicking on a product, you can view its detailed information along with similar products dynamically queried from <strong className="font-bold text-neutral-700 dark:text-neutral-200" >MongoDB Atlas</strong>. The quantity and price update dynamically based on user input, providing an interactive shopping experience.
+          </p>
+          <Image
+            src="/projects/maznrecommned.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain mt-5" />
+            <p className="text-center mt-2 font-sans dark:text-neutral-200">/product/:Id</p>
+        </div>
+        <div
+          key={"dummy-content9"}
+          className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+          <p
+            className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+            <span className="font-bold text-neutral-700 dark:text-neutral-200">
+
+            </span>{" "}
+
+            After clicking the Place Order button, a secure payment process is initiated, handled seamlessly by <strong className="font-bold text-neutral-700 dark:text-neutral-200" >Stripe</strong> for reliable and efficient transaction management.
+          </p>
+          <Image
+            src="/projects/stripepayment.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain mt-5" />
+            <p className="text-center mt-2 font-sans dark:text-neutral-200">/checkout.stripe.com</p>
+        </div>
+
+        <div
+          key={"dummy-content5"}
+          className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+          <p
+            className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+            <span className="font-bold text-neutral-700 dark:text-neutral-200">
+
+            </span>{" "}
+      
+This is the login page, which manages authentication using <strong className="font-bold text-neutral-700 dark:text-neutral-200" >JWT</strong> stored in cookies for secure session management. For social login, <strong className="font-bold text-neutral-700 dark:text-neutral-200" >Passport.Js</strong> is implemented, enabling seamless authentication through <strong className="font-bold text-neutral-700 dark:text-neutral-200" >Google, Facebook, and Twitter</strong>.
+          </p>
+          <Image
+            src="/projects/maznlogin.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-3/4 md:h-1/2 h-full w-full mx-auto object-contain mt-5" />
+            <p className="text-center mt-2 font-sans dark:text-neutral-200">/user/registration</p>
+        </div>
+
+        <div
+          key={"dummy-content8"}
+          className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4 text-center">
+       
+       <FloatingActionButtons/>
+         
+        </div>
+        
+
   </>);
 };
 
 const data = [
   {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "Imazine",
+    title: "NodeJs App",
+    src: "/projects/imazine.png",
+    content: <ImazineContent />,
   },
   {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "Snap",
+    title: "Social Media Website",
+    src: "/projects/snap.png",
+    content: <ImazineContent />,
   },
   {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
-    src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "Gembook",
+    title: "E-commerce Book Store",
+    src: "/projects/gembook.png",
+    content: <ImazineContent />,
   },
 
   {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
-    src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "AppleGadget",
+    title: "E-commerce for Electronics",
+    src: "/projects/applegadget.png",
+    content: <ImazineContent />,
   },
   {
-    category: "iOS",
-    title: "Photography just got better.",
-    src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "Redbanana",
+    title: "Random Features",
+    src: "/projects/redbanana.png",
+    content: <ImazineContent />,
   },
-  {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
-  },
+  
 ];

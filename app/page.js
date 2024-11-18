@@ -22,7 +22,7 @@ export default function Home() {
        </div>
          
        <div className="flex flex-col gap-5 items-center ">
-        <h2 className="text-4xl font-semibold text-slate-300 text-center tracking-wider">IMAZINE</h2>
+
          <div className="w-full flex justify-center md:gap-20 flex-wrap ">
          <video className="w-3/5 max-md:h-[45vh] max-md:w-5/6 " src="/mazn.mp4" autoPlay  playsInline  muted loop ></video>
          <video className=" w-5/6  md:w-1/4 md:h-[73.5vh] " src="/mobilemazn.mp4" autoPlay  playsInline  muted loop ></video>

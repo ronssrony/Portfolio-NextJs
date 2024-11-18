@@ -22,6 +22,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'assets.aceternity.com', // Unsplash image host
         pathname: '/**', // Allow all paths on Unsplash
+      }, 
+      {
+        protocol: 'https',
+        hostname: 'imazineblue.onrender.com', // Unsplash image host
+        pathname: '/**', // Allow all paths on Unsplash
       }
     ],
   },
