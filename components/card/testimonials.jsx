@@ -16,12 +16,13 @@ export function AnimatedTestimonialsDemo() {
       designation: "Social Media Website Top of Imazine",
       src: "/projects/snap.png",
     },
+ 
     {
       quote:
-        "Apple Gadget clone with HTML, CSS, Ruby on Rails; featuring a production-level navbar for large categories, product showcase, animated and static ads, and dynamic content injection",
-      name: "AppleGadget Clone",
-      designation: "E-commerce for Electronics",
-      src: "/projects/applegadget.png",
+        "Using Node.js and Socket.io, featuring real-time location tracking on a Leaflet map, allowing users to see their own and others' positions in the network.",
+      name: "Tracker",
+      designation: "Track in Real Time, Connect Anytime.",
+      src: "/projects/tracker.png",
     },
     {
       quote:
@@ -32,18 +33,20 @@ export function AnimatedTestimonialsDemo() {
     },
     {
       quote:
+        "Apple Gadget clone with HTML, CSS, Ruby on Rails; featuring a production-level navbar for large categories, product showcase, animated and static ads, and dynamic content injection",
+      name: "AppleGadget Clone",
+      designation: "E-commerce for Electronics",
+      src: "/projects/applegadget.png",
+    },
+  
+    {
+      quote:
         "Created a SPA with vanilla HTML, CSS, and JavaScript featuring a music player, e-commerce site, animated product showcase, and animations like Facebook-like system and Instagram double-tap to like.",
       name: "Redbanana",
       designation: "Some Ranodm Stuff",
       src: "/projects/redbanana.png",
     },
-    {
-        quote:
-          "Using Node.js and Socket.io, featuring real-time location tracking on a Leaflet map, allowing users to see their own and others' positions in the network.",
-        name: "Tracker",
-        designation: "Track in Real Time, Connect Anytime.",
-        src: "/projects/tracker.png",
-      },
+  
   ];
   return <AnimatedTestimonials testimonials={testimonials} />;
 }

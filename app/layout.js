@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import "./globals.css";
 import Link from 'next/link';
 import { TracingBeam } from '@/components/ui/tracing-beam';
+import { NavbarDemo } from '@/components/Navbar/Navbar';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -21,20 +22,9 @@ export default function RootLayout({ children }) {
       <body
         className={` ${inter.className} antialiased p-8 selection:bg-slate-500`}
       >
-       <nav className='flex justify-between   rounded  '>
-        <h2>
-         <Link href={`/`}>LOGO</Link>
-        </h2>
-        <ul className='flex gap-10'>
-          <li className='inline-block cursor-pointer hover:text-slate-300 '> <Link href={`/home`}>Home</Link> </li>
-          <li className='inline-block cursor-pointer hover:text-slate-300 '>About</li>
-          <li className='inline-block cursor-pointer hover:text-slate-300 '>Enterprise</li>
-          <li className='inline-block cursor-pointer hover:text-slate-300 '><Link href={`/gallery`}>Gallery</Link></li>
-        </ul>
-        <h2>
-          Profile
-        </h2>
-        </nav>  
+      <div className='flex justify-end'>
+        <NavbarDemo/>
+      </div>
         <TracingBeam>
 
         {children}
