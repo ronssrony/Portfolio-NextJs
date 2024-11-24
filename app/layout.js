@@ -22,8 +22,10 @@ export default function RootLayout({ children }) {
       <body
         className={` ${inter.className} antialiased p-8 selection:bg-slate-500`}
       >
-      <div className='flex justify-end'>
+      <div className='flex  text-lg'>
+    
         <NavbarDemo/>
+      
       </div>
         <TracingBeam>
 
