@@ -20,10 +20,9 @@ export default function RootLayout({ children }) {
 
     <html lang="en">
       <body
-        className={` ${inter.className} antialiased p-8 selection:bg-slate-500`}
+        className={` ${inter.className} antialiased p-8 selection:bg-slate-500 max-w-screen-2xl mx-auto`}
       >
       <div className='flex  text-lg'>
-    
         <NavbarDemo/>
       
       </div>
