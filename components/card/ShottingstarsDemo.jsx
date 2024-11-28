@@ -5,7 +5,7 @@ import { StarsBackground } from "@/components/ui/starts-background";
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
     (<div
-      className="h-[30rem] rounded-md  flex flex-col items-center justify-center absolute w-[calc(100%-2rem)]  ">
+      className="h-[30rem] rounded-md  flex flex-col items-center justify-center absolute w-full md:w-[calc(100%-2rem)]  ">
       <ShootingStars />
       <StarsBackground />
     </div>)
