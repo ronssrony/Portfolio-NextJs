@@ -3,6 +3,7 @@ import prompt from "./prompt";
 import React, { useState } from "react";
 import { HfInference } from "@huggingface/inference";
 
+
 const ChatComponent = () => {
   const [messages, setMessages] = useState([]);
   const [userInput, setUserInput] = useState("");
@@ -73,12 +74,13 @@ const ChatComponent = () => {
     <div className="h-[90vh] w-[90vw] max-w-[600px] mx-auto flex flex-col  rounded-lg bg-transparent">
       {/* Header Section */}
       <div className="flex flex-col items-center border-b border-gray-700 py-4">
-        <img
-          src="/cvphoto.jpg"
-          alt="Profile"
-          className="w-20 h-20 rounded-full mb-2"
-        />
-        <h3 className="text-lg font-semibold text-white">Md Abdullah AL Mamun</h3>
+      <img
+  src="/mine/upload.jpg"
+  alt="Profile"
+  className="w-20 h-20    rounded-full mb-2  "
+
+/>
+        <h3 className="text-lg font-semibold text-white">Md Abdullah Al Mamun</h3>
         <div className="flex items-center text-sm text-gray-400">
           <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
           <span>Available to work</span>
